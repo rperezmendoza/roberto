@@ -1,0 +1,18 @@
+*******************************************************************
+******************************LICENSE******************************
+*****************************AGREEMENT*****************************
+*******************************************************************
+
+The work provided on this folder is protected by the copyright law.
+Any used of the work other than as authorized uder this license and
+or copyright law is prohibited. 
+
+After reading the the license agreement and exercising any rights 
+to the work provided in this document, you agree and accept to
+follow the terms of this license. Changes to this license may be
+made; therfore, it is recommeded to check this file more often as
+the changes might affect the agreement. 
+
+******************************************************************
+**************************END OF AGREEMENT************************
+******************************************************************
