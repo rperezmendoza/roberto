@@ -1,39 +1,103 @@
-<!-This is my index page->
+<!DOCTYPE html>
 <html>
-<head>
-<!-code color reference-.https://www.w3schools.com/colors/colors_picker.asp->
-<style>
-body{background-color: #668cff}
-h1{color: #4d0000}
-
-<!Tab>
-#Home{background-color: orange;}
-#About{background-color: blue;}
-#Contact{background-color: yellow;}
-
-</style>
-</head>
-    <title>Roberto's Home Page</title>
-	<body>
-        <a href="index.html">Main Page</a>
-        <a href="rpages/home.html">Content Page</a>
-        <a href="rpages/about.html">About Page</a>
+    <head>
+        <style>
+            .tab {
+                background-color: #F4F3F3;
+                color: black;
+                float: left;
+                border: none;
+                padding: 14px 16px;
+                font-size: 15px;
+                width: 20%;
+            }
         
-		<h1>WELCOME TO MY PAGE</h1>
+        .tab:hover {
+            background-color: #ABAAA9;
+        }
         
+        /*Tab content*/
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 50px;
+            text-align: left;
+        }
         
-        
-		<p>This page is under maintenance. Please check often for any updates</p>
-		<p>Thank you:)</p>
-  
-		
-		<p>Hello, my name is Roberto and I recently graduate from California State University, Fullerton with a major in Computer Science. I'm currently obtaining my master's in computer science. I love to code and design simple programs. Please feel free to visit my website more often as I will be adding more information about me.</p>
-        
-        <h2>If you would like to know more about me, click the links provided below.</h2>
-        <p><a href="https://1drv.ms/w/s!AgQCEBAQBBbYhpwQroW9ARqDM-w52w">Roberto's Resume</a> Link to access my Resume.</p>
-        <p><a href="https://networkkinection.com/blog/internship-success-roberto-perez-mendoza">My Internship at ViewSonic</a> Link to access my internship success.</p>
-        <p><a href="https://www.linkedin.com/in/roberto-perez-mendoza-042b40104">LinkedIn</a> Access to my LinkedIn profile.</p>
-
-	</body>
+        /*Background color per tab*/
+        #About{background-color:red;}
+        #Education{background-color:green;}
+        #WorkExperience{background-color:blue;}
+        #Contact{background-color:orange;}
+        #Projects{background-color:yellowgreen}
+            </style>
+    </head>
     
+    <!--Body content of the page-->
+    <body>
+        
+        <!--Tab Classes start here-->
+        <button class="tab" onclick="openTab('About', this, 'red')" id="defaultOpen">About</button>
+        <button class="tab" onclick="openTab('Education', this, 'green')">Education</button>
+        <button class="tab" onclick="openTab('WorkExperience', this, 'blue')">Work Experience</button>
+        <button class="tab" onclick="openTab('Projects', this, 'yellowgreen')">Projects</button>
+        <button class="tab" onclick="openTab('Contact', this, 'orange')">Contact</button>
+        
+        
+        <div id="About" class="tabcontent">
+            <h3>About</h3>
+            <p>Hello, my name is Roberto and I recently graduated from California State University, Fullerton with a major in Computer Science. I'm currently obtaining my master's in computer science. I love to code and design simple programs. In addition, I enjoy learning new things in my spare time. Please feel free to visit my website for more information about me.</p>
+            
+            <h2>If you would like to know more about me, click the links provided below.</h2>
+            <p><a href="https://1drv.ms/w/s!AgQCEBAQBBbYhpwQroW9ARqDM-w52w">Roberto's Resume</a> Link to access my Resume.</p>
+            <p><a href="https://networkkinection.com/blog/internship-success-roberto-perez-mendoza">My Internship at ViewSonic</a> Link to access my internship success.</p>
+            <p><a href="https://www.linkedin.com/in/roberto-perez-mendoza-042b40104">LinkedIn</a> Access to my LinkedIn profile.</p>
+        </div>
+        
+        <div id="Education" class="tabcontent">
+            <h3>Education</h3>
+            <p>Under Maintenance</p>
+        </div>
+        
+        <div id="WorkExperience" class="tabcontent">
+            <h3>Work Experience</h3>
+            <p>Under Maintenance</p>
+        </div>
+        
+        <div id="Contact" class="tabcontent">
+            <h3>Contact</h3>
+            <p>Under Maintenance</p>
+        </div>
+        
+        <div id="Projects" class="tabcontent">
+            <h3>Projects</h3>
+            <p>In this page, you will find all my projects</p>
+            <p>Check back later</p>
+        </div>
+        <!--End of tab classes-->
+        
+        <script>
+            function openTab(cityName,elmnt,color) {
+                var i, tabcontent, tab;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tab = document.getElementsByClassName("tab");
+                for (i = 0; i < tab.length; i++) {
+                    tab[i].style.backgroundColor = "";
+                }
+                document.getElementById(cityName).style.display = "block";
+                elmnt.style.backgroundColor = color;
+                
+            }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+            </script>
+        
+        <!--footer-->
+        <footer>
+            <p align="center">Condition of use &copy; 2018, Roberto Perez Mendoza</p>
+        </footer>
+    </body>
 </html>
